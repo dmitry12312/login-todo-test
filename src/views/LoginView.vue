@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow-y: scroll">
     <div class="header">
       <div class="header-upper"></div>
       <div class="header-lower">
@@ -25,10 +25,10 @@
             <p>In just a few clicks, you can connect your data from 1C, CRM (Bitrix24, AmoCRM, ZohoCRM), E-commerce
               (PROM.UA, Rozetka, ebay), Logistic (Nova Poshta), Google Analytics and many more systems that reflect
               different aspects of business activities.</p>
-            <li>Automated data updates</li>
+            <li class="list-header">Automated data updates</li>
             <p>The application automatically updates and structures the data in just 60 seconds, saving you time and
               money.</p>
-            <li>Data Security</li>
+            <li class="list-header">Data Security</li>
             <p>The Bank guarantees the safety of your personal data, ensuring their integrity and confidentiality.</p>
           </ul>
         </div>
@@ -116,7 +116,7 @@ export default {
   margin-left: 377px;
   font-size: 15px;
   color: black;
-  margin-top: -250px;
+  margin-top: -150px;
 }
 
 
@@ -189,9 +189,106 @@ hr {
 .login-component {
   position: relative;
   width: 20%;
-  max-width: 30%;
-  height: 35vh;
+  max-width: 300px;
+  height: 20vh;
+  max-height: 25vh;
   left: 70%;
   top: -150px;
+}
+@media (max-width: 1000px){
+  .business-analytics{
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 35px;
+    margin-left: 177px;
+  }
+  .body-content-header {
+    max-width: 35%;
+    margin-left: 177px;
+    font-size: 13px;
+    color: black;
+    margin-top: -100px;
+  }
+  .body-content {
+    max-width: 35%;
+    margin-left: 177px;
+    font-size: 13px;
+    color: black;
+  }
+  .upper-footer {
+    margin-left: 177px;
+    padding-right: 10px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    margin-right: 12px;
+  }
+
+  .footer-logo-image {
+    width: 28px;
+    height: 17px;
+    margin-top: 12px;
+  }
+
+  hr {
+    border: 1px solid #FFFFFF;
+    margin: 0 80px 0 177px;
+  }
+
+  .lower-footer {
+    font-size: 13px;
+    margin: 15px 0 0 177px;
+  }
+}
+@media (max-width: 450px) {
+ .header-logo-image{
+   width: 50px;
+   height: 33px;
+   margin-left: 77px;
+   margin-top: 10px;
+ }
+  .business-analytics{
+    line-height: 35px;
+    margin-left: 57px;
+  }
+  .body-content {
+    max-width: 80%;
+    margin-left: 57px;
+    font-size: 11px;
+  }
+
+  .body-content-header {
+    max-width: 50%;
+    margin-left: 57px;
+    font-size: 11px;
+    margin-top: -150px;
+  }
+  .upper-footer {
+    margin-left: 57px;
+    padding-right: 10px;
+  }
+
+  .footer-text {
+    font-size: 8px;
+    margin-right: 12px;
+  }
+
+  .footer-logo-image {
+    width: 18px;
+    height: 12px;
+    margin-top: 8px;
+  }
+
+  hr {
+    border: 1px solid #FFFFFF;
+    margin: 0 40px 0 57px;
+  }
+
+  .lower-footer {
+    font-size: 10px;
+    padding-bottom: 20px;
+    margin: 15px 0 0 57px;
+  }
 }
 </style>

@@ -100,15 +100,14 @@ export default {
   justify-content: space-between;
   flex-direction: column;
   padding-left: 20px;
-  height: 100%;
+  height: 32vh;
   background: #FFFFFF;
   box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-  z-index: 99;
 }
 
 .base-inputs {
   height: 20px;
-  padding-right: 20px;
+  width: 80%;
 }
 
 .confirm-btn {
@@ -132,5 +131,36 @@ export default {
 
 .invalid-data {
   color: red;
+}
+@media (max-width: 450px) {
+  .base-inputs {
+    height: 10px;
+  }
+
+  .confirm-btn {
+    margin: 10px 0;
+    padding: 2px 8px;
+    font-size: 11px;
+    background: #0076C0;
+    color: #FFFFFF;
+    border: 3px solid #0076C0;
+
+  }
+  .container{
+    padding-left: 3px;
+    width: 12vh;
+    height: 17vh;
+  }
+  .username {
+    font-size: 11px;
+    margin: 7px 0;
+  }
+  .password{
+    font-size: 11px;
+  }
+  .invalid-data {
+    font-size: 9px
+  }
+
 }
 </style>

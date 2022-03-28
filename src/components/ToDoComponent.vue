@@ -8,7 +8,7 @@
           type="checkbox"
           v-model="isDone"
           @change="doneToDo">
-      {{ toDoItem.task }}
+       {{ toDoItem.task }}
     </div>
     <div>
       <input
@@ -102,7 +102,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 8px 8px 5px 25px;
-  margin: 10px 0;
+  margin: 10px 15px;
   background: rgba(128, 128, 128, 0.8);
   color: #FFFFFF;
   border-radius: 9px;
@@ -150,12 +150,30 @@ button {
   font-weight: bold;
   border-radius: 99px;
 }
-.edit-todo{
+
+.edit-todo {
   padding: 3px 5px;
   border: solid #0076C0 3px;
   border-radius: 9px;
 }
-.done-to-do{
+
+.done-to-do {
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .to-do-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .to-do-task{
+    max-width: 50px;
+  }
+    .edit-todo {
+      padding: 0 2px;
+      width: 30%;
+    }
+  }
 </style>

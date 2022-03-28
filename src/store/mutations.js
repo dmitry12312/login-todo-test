@@ -21,7 +21,11 @@ const mutations = {
         localStorage.setItem('toDoList', JSON.stringify(state.toDoList));
     },
     DELETE_TO_DO_ITEM(state, id) {
-        state.toDoList.splice(id, 1);
+        const currentSearchIndex = state.toDoList.findIndex(
+            (item) => item.id === id,
+        );
+
+        state.toDoList.splice(currentSearchIndex, 1);
         localStorage.setItem('toDoList', JSON.stringify(state.toDoList));
     },
 

@@ -67,10 +67,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .background {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 80vh;
   background: linear-gradient(180deg, #00A9E7 0%, #005B9F 100%);
@@ -86,9 +86,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
   width: 65%;
-  height: 55vh;
+  min-height: 70vh;
+  padding-bottom: 20px;
   background: #FFFFFF;
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 }
 
 .thank-header {
@@ -130,6 +133,21 @@ export default {
     background-color: grey;
     border: 3px solid grey;
     color: #FFFFFF;
+  }
+}
+
+@media (max-width: 900px) {
+  .thank-header {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+  .logo{
+    width: 93px;
+    height: 59px;
+  }
+  .add-to-do{
+    width: 60%;
   }
 }
 </style>
