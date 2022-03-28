@@ -183,6 +183,7 @@ hr {
 }
 
 .lower-footer {
+  padding-bottom: 15px;
   margin: 40px 0 0 377px;
 }
 
@@ -287,7 +288,6 @@ hr {
 
   .lower-footer {
     font-size: 10px;
-    padding-bottom: 20px;
     margin: 15px 0 0 57px;
   }
 }
