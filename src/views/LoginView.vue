@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container"></div>
+    <div class="main"></div>
     <div class="login-block">
       <login-component></login-component>
     </div>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.main {
   margin-top: 0;
   height: 100vh;
   width: 100vw;

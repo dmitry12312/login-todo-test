@@ -191,9 +191,7 @@ export default {
 
   }
   .container {
-    padding-left: 3px;
-    width: 12vh;
-    height: 17vh;
+    padding-left: 15px;
   }
 
 
