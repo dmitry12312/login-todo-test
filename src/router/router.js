@@ -30,8 +30,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (to.name !== 'Login' && !store.state.isLoggedIn && !store.state.username) {
     next({path: '/login'});
-  }
-  else {
+  } else {
     next();
   }
 })

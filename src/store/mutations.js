@@ -28,6 +28,14 @@ const mutations = {
         state.toDoList.splice(currentSearchIndex, 1);
         localStorage.setItem('toDoList', JSON.stringify(state.toDoList));
     },
+    DELETE_LOG_STATUS(state){
+        state.isLoggedIn = false;
+        localStorage.removeItem('isLoggedIn');
+    },
+    DELETE_USERNAME_VALUE(state) {
+        state.username = '';
+        localStorage.removeItem('username');
+    },
 
 
 }

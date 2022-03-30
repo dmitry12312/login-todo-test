@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <div>
+    <div class="login-header">
+      <h2>Welcome back</h2>
+      <div>Enter your credentials to access your account</div>
+    </div>
+    <div class="login-container">
       <form
           @submit="login"
           class="username"
@@ -11,6 +15,7 @@
             type="text"
             id="username"
             class="base-inputs"
+            placeholder="Enter your username / Dmitry"
             required
         >
       </form>
@@ -24,6 +29,7 @@
             type="password"
             id="password"
             class="base-inputs"
+            placeholder="Enter your password / 12345"
             required
         >
       </form>
@@ -35,13 +41,14 @@
       Your username or password is incorrect.
       Please, try again.
     </div>
-    <div>
+    <div class="login-btn">
       <button
           @click="login"
           @keyup.enter="login"
           type="submit"
           class="confirm-btn"
-      >Login</button>
+      >Login
+      </button>
     </div>
   </div>
 </template>
@@ -49,7 +56,7 @@
 <script>
 import {mapActions, mapGetters} from "vuex";
 
-const USERNAME = 'Admin';
+const USERNAME = 'Dmitry';
 const PASSWORD = '12345';
 
 export default {
@@ -96,27 +103,58 @@ export default {
 
 .container {
   display: flex;
-  align-content: flex-start;
-  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: column;
   padding-left: 20px;
-  height: 32vh;
-  background: #FFFFFF;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+  max-height: 380px;
+  background: #FFFFFF !important;
   box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 }
 
+.login-header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-container {
+  width: 100%;
+}
+
 .base-inputs {
-  height: 20px;
-  width: 80%;
+  padding: 8px 3px;
+  margin: 3px 0;
+  max-width: 450px;
+  width: 95%;
+  min-width: 100px;
+  border: none;
+  box-shadow: 2px 2px 4px 0 rgba(34, 60, 80, 0.2);
+  border-radius: 9px;
+}
+
+  ::placeholder{
+    padding-left: 10px;
+    color: rgba(66, 66, 66, 0.5);
+
+}
+
+.login-btn {
+  width: 95%;
 }
 
 .confirm-btn {
-  margin: 20px 0;
-  padding: 5px 45px;
+  max-width: 450px;
+  width: 100%;
+  min-width: 150px;
+  padding: 7px 0;
+  margin: 15px 0;
   font-size: 18px;
   background: #0076C0;
   color: #FFFFFF;
   border: 3px solid #0076C0;
+  border-radius: 9px;
 
   &:hover {
     background: #FFFFFF;
@@ -127,11 +165,17 @@ export default {
 
 .username {
   margin: 15px 0;
+  padding-bottom: 20px;
+}
+
+.password {
+  margin: 15px 0;
 }
 
 .invalid-data {
   color: red;
 }
+
 @media (max-width: 450px) {
   .base-inputs {
     height: 10px;
@@ -140,27 +184,18 @@ export default {
   .confirm-btn {
     margin: 10px 0;
     padding: 2px 8px;
-    font-size: 11px;
+    font-size: 17px;
     background: #0076C0;
     color: #FFFFFF;
     border: 3px solid #0076C0;
 
   }
-  .container{
+  .container {
     padding-left: 3px;
     width: 12vh;
     height: 17vh;
   }
-  .username {
-    font-size: 11px;
-    margin: 7px 0;
-  }
-  .password{
-    font-size: 11px;
-  }
-  .invalid-data {
-    font-size: 9px
-  }
+
 
 }
 </style>

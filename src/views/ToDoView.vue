@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="background">
-      <img class="logo" src="../assets/images/logo.png" alt="logo">
+      <div class="logout-btn">
+        <router-link to="/login">
+          <i @click="LogOut" class="fa fa-sign-out"></i>
+        </router-link>
+      </div>
       <div class="thank-block">
         <div class="thank-text">
           <p class="thank-header">Thank you {{ getUsername }}!</p>
@@ -46,7 +50,11 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['updateToDoList']),
+    ...mapActions([
+        'updateToDoList',
+        'deleteUsernameValue',
+        'deleteLogStatus'
+    ]),
     addToDo() {
       const toDoItem = {
         id: this.getToDoList.length,
@@ -56,6 +64,10 @@ export default {
       this.updateToDoList(toDoItem);
       this.addedItem = null;
     },
+    LogOut(){
+      this.deleteUsernameValue();
+      this.deleteLogStatus();
+    }
   },
   computed: {
     ...mapGetters([
@@ -76,12 +88,6 @@ export default {
   background: linear-gradient(180deg, #00A9E7 0%, #005B9F 100%);
 }
 
-.logo {
-  width: 186px;
-  height: 119px;
-  margin: 65px 0 30px 0;;
-}
-
 .thank-block {
   display: flex;
   flex-direction: column;
@@ -90,6 +96,7 @@ export default {
   width: 65%;
   min-height: 70vh;
   padding-bottom: 20px;
+  margin-top: 150px;
   background: #FFFFFF;
   box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 }
@@ -134,6 +141,15 @@ export default {
     border: 3px solid grey;
     color: #FFFFFF;
   }
+}
+.fa-sign-out{
+  position: fixed;
+  top: 1%;
+  color: black;
+  right: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 @media (max-width: 900px) {

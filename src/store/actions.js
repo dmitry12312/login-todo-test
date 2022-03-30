@@ -1,3 +1,4 @@
+
 const actions = {
     setUsername({commit}, username) {
         commit('USERNAME_VALUE', username);
@@ -11,7 +12,12 @@ const actions = {
     deleteToDoItem({commit}, id){
         commit('DELETE_TO_DO_ITEM', id);
     },
-
+    deleteLogStatus({commit}, isLoggedIn){
+        commit('DELETE_LOG_STATUS', isLoggedIn);
+    },
+    deleteUsernameValue({commit}, username){
+        commit('DELETE_USERNAME_VALUE', username);
+    }
 
 }
 export default actions;
